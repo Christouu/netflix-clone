@@ -23,7 +23,7 @@ export default function NewProduct() {
   };
 
   //add images,videos,trailers to firebase storage
-  //filename  i used so that we can add same pictures adn both will be added to storage
+  //filename is used so that we can add same pictures adn both will be added to storage
   const upload = (items) => {
     items.forEach((item) => {
       const fileName = new Date().getTime() + item.label + item.file.name;

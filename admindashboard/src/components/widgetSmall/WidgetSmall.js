@@ -13,7 +13,7 @@ export default function WidgetSmall() {
         const res = await axios.get("/users?new=true", {
           headers: {
             token:
-              "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxODUwYzRlNDNhN2NmNzkxMWYyZmFlNyIsImlzQWRtaW4iOnRydWUsImlhdCI6MTYzNjEwOTQ5MSwiZXhwIjoxNjM2NTQxNDkxfQ.oQ6RjZq_3sTzgcn_p5cqbfjV7lErZqgdz2KjvjKyJIc",
+              "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYzlmOTI0MmQyNDdmMzQ2MjRiMWZkOCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY0MDY5NDQ0MCwiZXhwIjoxNjQxMTI2NDQwfQ.W2e8NWg3ssLj-qnhnju6m-XO3yMssZ16DQUFeOycKpQ",
           },
         });
 
@@ -30,7 +30,7 @@ export default function WidgetSmall() {
       <span className="widgetSmallTitle">New Members</span>
       <ul className="widgetSmallList">
         {newUsers.map((user) => (
-          <li className="widgetSmallListItem">
+          <li className="widgetSmallListItem" key={user._id}>
             <img
               src={
                 user.profilePic ||
